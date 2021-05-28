@@ -1,15 +1,46 @@
-import preprocess from 'svelte-preprocess';
+import preprocess from "svelte-preprocess";
+import node from "@sveltejs/adapter-node";
+import { resolve } from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: preprocess(),
+	preprocess: preprocess({
+		preserve: ["ld+json"],
+		defaults: {
+			script: "typescript",
+			style: "scss",
+		},
+		scss: {
+			prependData: `@import './src/style/_theme.scss';`,
+			renderSync: true,
+		},
+	}),
 
 	kit: {
+		adapter: node(),
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
-	}
+		target: "#svelte",
+		vite: {
+			// server: { https: true },
+			build: {
+				minify: "terser",
+				// target: "es2015",
+				chunkSizeWarningLimit: 1000,
+			},
+			resolve: {
+				alias: {
+					$uikit: resolve("./src/components/uikit"),
+					$svg: resolve("./src/components/svg"),
+					$components: resolve("./src/components"),
+					$stores: resolve("./src/stores"),
+					$helpers: resolve("./src/helpers"),
+					env: resolve("./src/env.ts"),
+				},
+			},
+		},
+	},
 };
 
 export default config;
