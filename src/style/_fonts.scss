@@ -1,0 +1,80 @@
+// Montserrat
+
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: lighter;
+	font-display: swap;
+	src: local("Montserrat Regular"), local("Montserrat-Regular"),
+		url(/fonts/Montserrat-Regular.woff2) format("woff2"),
+		url(/fonts/Montserrat-Regular.woff) format("woff"),
+		url(/fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
+// MrDafoe
+@font-face {
+	font-family: "MrDafoe";
+	font-style: normal;
+	font-display: swap;
+	src: local("MrDafoe Regular"), local("MrDafoe-Regular"),
+		// url(/fonts/MrDafoe-Regular.woff2) format("woff2"),
+		// url(/fonts/MrDafoe-Regular.woff) format("woff"),
+		url(/fonts/MrDafoe-Regular.ttf) format("truetype");
+}
+
+// FiraCode
+
+@font-face {
+	font-family: "FiraCode Bold";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: local("FiraCode Bold"), local("FiraCode-Bold"),
+		// url(/fonts/FiraCode-Bold.woff2) format("woff2"),
+		// url(/fonts/FiraCode-Bold.woff) format("woff"),
+		url(/fonts/FiraCode-Bold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "FiraCode SemiBold";
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: local("FiraCode SemiBold"), local("FiraCode-SemiBold"),
+		// url(/fonts/FiraCode-SemiBold.woff2) format("woff2"),
+		// url(/fonts/FiraCode-SemiBold.woff) format("woff"),
+		url(/fonts/FiraCode-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "FiraCode Medium";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: local("FiraCode Medium"), local("FiraCode-Medium"),
+		// url(/fonts/FiraCode-Medium.woff2) format("woff2"),
+		// url(/fonts/FiraCode-Medium.woff) format("woff"),
+		url(/fonts/FiraCode-Medium.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "FiraCode Regular";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: local("FiraCode Regular"), local("FiraCode-Regular"),
+		// url(/fonts/FiraCode-Regular.woff2) format("woff2"),
+		// url(/fonts/FiraCode-Regular.woff) format("woff"),
+		url(/fonts/FiraCode-Regular.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "FiraCode Light";
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: local("FiraCode Light"), local("FiraCode-Light"),
+		// url(/fonts/FiraCode-Light.woff2) format("woff2"),
+		// url(/fonts/FiraCode-Light.woff) format("woff"),
+		url(/fonts/FiraCode-Light.ttf) format("truetype");
+}

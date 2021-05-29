@@ -31,11 +31,11 @@ const config = {
 			},
 			resolve: {
 				alias: {
-					$uikit: resolve("./src/components/uikit"),
-					$svg: resolve("./src/components/svg"),
-					$components: resolve("./src/components"),
+					$uikit: resolve("./src/lib/uikit"),
+					$svg: resolve("./src/lib/svg"),
+					$lib: resolve("./src/lib"),
 					$stores: resolve("./src/stores"),
-					$helpers: resolve("./src/helpers"),
+					$utils: resolve("./src/utils"),
 					env: resolve("./src/env.ts"),
 				},
 			},

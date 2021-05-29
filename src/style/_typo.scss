@@ -1,0 +1,163 @@
+@use "sass:math";
+//Fluid typography
+
+@function pow($number, $exponent) {
+	$value: 1;
+	@if $exponent > 0 {
+		@for $i from 1 through $exponent {
+			$value: $value * $number;
+		}
+	}
+	@return $value;
+}
+
+$scale: 1.25;
+
+@mixin fs0 {
+	font-size: math.div(1rem, $scale);
+	font-size: clamp(12px, 0.8rem, 16px);
+}
+
+@mixin fs1 {
+	font-size: 1rem;
+}
+
+@mixin fs2 {
+	font-size: $scale * 1rem;
+}
+
+@mixin fs3 {
+	font-size: pow($scale, 2) * 1rem;
+}
+
+@mixin fs4 {
+	font-size: pow($scale, 3) * 1rem;
+}
+
+@mixin fs5 {
+	font-size: pow($scale, 4) * 1rem;
+}
+
+@mixin fs6 {
+	font-size: pow($scale, 5) * 1rem;
+}
+
+/* -----------------
+	TYPOS
+----------------- */
+
+// title 1
+@mixin t1 {
+	font-family: "MrDafoe";
+	font-weight: 500;
+	font-size: pow($scale, 6) * 1rem;
+}
+
+// title 2
+@mixin t2 {
+	font-family: "FiraCode Medium";
+	@include fs4;
+}
+@mixin t2-light {
+	@include fs4;
+	font-family: "FiraCode Light";
+}
+@mixin t2-sb {
+	@include fs4;
+	font-family: "FiraCode SemiBold";
+}
+@mixin t2-bold {
+	@include fs4;
+	font-family: "FiraCode Bold";
+}
+
+// title 3
+@mixin t3 {
+	font-family: "FiraCode Medium";
+	@include fs3;
+}
+@mixin t3-light {
+	font-family: "FiraCode Light";
+	@include fs3;
+}
+@mixin t3-sb {
+	font-family: "FiraCode SemiBold";
+	@include fs3;
+}
+@mixin t3-bold {
+	font-family: "FiraCode Bold";
+	@include fs3;
+}
+
+// title 4
+@mixin t4 {
+	font-family: "FiraCode Medium";
+	@include fs2;
+}
+@mixin t4-light {
+	@include fs2;
+	font-family: "FiraCode Light";
+}
+@mixin t4-sb {
+	@include fs2;
+	font-family: "FiraCode SemiBold";
+}
+@mixin t4-bold {
+	@include fs2;
+	font-family: "FiraCode Bold";
+}
+
+// SUBTITLES
+@mixin caption {
+	font-family: "FiraCode Medium";
+	line-height: 125%;
+	@include fs1;
+}
+@mixin caption-light {
+	font-family: "FiraCode Light";
+	line-height: 125%;
+	@include fs1;
+}
+@mixin caption-sb {
+	font-family: "FiraCode SemiBold";
+	line-height: 125%;
+	@include fs1;
+}
+@mixin caption-bold {
+	font-family: "FiraCode Bold";
+	line-height: 125%;
+	@include fs1;
+}
+
+// BODIES
+@mixin body1 {
+	font-family: "FiraCode Medium";
+	line-height: 150%;
+	@include fs1;
+}
+@mixin body1-light {
+	font-family: "FiraCode Light";
+	line-height: 150%;
+	@include fs1;
+}
+@mixin body1-sb {
+	font-family: "FiraCode SemiBold";
+	line-height: 150%;
+	@include fs1;
+}
+@mixin body1-bold {
+	font-family: "FiraCode Bold";
+	line-height: 150%;
+	@include fs1;
+}
+
+@mixin body2 {
+	font-family: "FiraCode Light";
+	line-height: 130%;
+	@include fs0;
+}
+@mixin body2-sb {
+	font-family: "FiraCode SemiBold";
+	line-height: 130%;
+	@include fs0;
+}

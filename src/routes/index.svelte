@@ -1,118 +1,102 @@
 <script>
-	let quoteWidth: number;
+	import LogoPm from "$svg/Logo-PM.svelte";
+	import LogoPolymath from "$svg/Logo-Polymath.svelte";
+	import Intro from "$lib/Intro.svelte";
+	import Skills from "$lib/Skills.svelte";
+	import IntersectionObserver from "$lib/IntersectionObserver.svelte";
 </script>
 
-<section class="global-container">
-	<h1>&nbsp; Polymath &nbsp;</h1>
+<section>
+	<h1>
+		&nbsp;
+		<i class="polymath">
+			<LogoPolymath />
+		</i>
+		&nbsp;
+	</h1>
 
-	<div class="intro">
-		<p>
-			Hey ! C'est moi, <strong>votre homme à tout faire</strong
-			>,
-			<em class="def"
-				>Polymath <div
-					bind:clientWidth={quoteWidth}
-					class="bull"
-					style="left: {quoteWidth} - 50%">
-					<q>
-						La polymathie est la connaissance approfondie
-						d’un grand nombre de sujets différents, en
-						particulier dans le domaine des arts et des
-						sciences. Le substantif associé est polymathe,
-						parfois également nommé « personne d'esprit
-						universel » ou « génie universel ».</q>
-					– Wikipédia
-				</div></em
-			>. Ou simplement <em>Math</em> en fait...
-			<!-- Hey! I'm your polyvalent advisor, Polymath. Or just Math
-				actually... -->
-		</p>
-		<p>
-			Je suis étudiant-ingénieur en Informatique et Système
-			d'Information à l'<u
-				>Université de Technologie de Troyes</u>
-			(Oui oui, c'est une école d'ingénieur bien que son nom puisse
-			laisser en transparente autrement).
-		</p>
-		<p>
-			Je suis également
-			<strong>"Designer"</strong>
-			(mais je préfère le terme "Ergonome") et
-			<strong>Développeur</strong>
-			en <strong>Freelance spécialisé dans le web</strong>.
-			<!-- I'm a 22-year-old software engineer and also a designer and
-				web developer freelance. -->
-		</p>
-		<p>
-			Fortement intéressé et intrigué par l'informatique, je me
-			suis rapidement tourné vers des études dans l'ingénierie
-			logicielle afin d'en découvrir un peu plus. C'est ainsi
-			que j'ai découvert une nouvelle passion ! De la conception
-			à la réalisation, un nouveau champ des possibles dont
-			seule la créativité semble être la limite s'est ouvert à
-			moi.
-		</p>
-		<p>
-			Depuis, je me suis spécialisé dans le développement web,
-			me permettant aussi bien de créer des interfaces
-			utilisateurs que l'architecture permettant de stocker et
-			délivrer les données dont ont besoin les
-			clients/utilisateurs.
-		</p>
-		<p>
-			Au fur et à mesure, je me suis rendu compte de
-			l'importance de l'<strong>UX</strong> (Expérience
-			Utilisateur) et notamment de l'<strong>UI</strong>
-			(Interface Utilisateur) dans la réussite d'un projet. Ça tombe
-			bien, encore quelque chose qui m'anime ! Ni une ni deux, je
-			me suis formé à la <strong>conception</strong> et au
-			<strong>design</strong> de projets informatiques, dans le but
-			de pouvoir proposer un service complet à mes futurs clients.
-		</p>
+	<Intro />
+
+	<Skills />
+
+	<div class="contact">
+		<p>Contact:</p>
+		<p><strong>matheo.pierini.pro@gmail.com</strong></p>
 	</div>
 
-	<div class="grid">
-		<div class="col-1">
-			<h2>Conception & Ergonomie</h2>
-			<p>
-				Besoin d'un site vitrine pour votre activité, mais
-				vous voulez quelque chose qui vous corresponde ? Après
-				une prise de besoin détaillé, je conçois pour vous les
-				designs tout en applicant les règles de rétention
-				client pour les amener vers <mark>votre objectif</mark
-				>. Bien sûr, toujours dans le
-				<mark>respect de vos utilisateurs.</mark>
-			</p>
-		</div>
-		<div class="col-2">
-			<h2>Développement Web</h2>
-			<p>
-				Ca y est, vous avez vos designs pour votre site
-				internet, mais il vous manque le développeur ? Pas
-				cette fois ! Après que nous nous soyons mis d'accord
-				sur le contenu de vote site web, je m'occupe aussitôt
-				de le coder et de le mettre en ligne ! <u
-					>Facile, non ?</u>
-			</p>
-		</div>
-	</div>
+	<IntersectionObserver let:intersecting top={-50} once={true}>
+		{#if intersecting}
+			<i class:appears={intersecting} class="logo-pm">
+				<LogoPm opa={0.8} />
+			</i>
+		{/if}
+	</IntersectionObserver>
 </section>
 
 <style lang="scss">
 	section {
-		@include my(5rem);
-		@include py(4rem);
-		border: solid 1px $black;
+		--px: #{$sp-200};
+		padding: var(--px);
+		padding-bottom: $sp-600;
+		@include mx($sp-100);
+		max-width: 100vw;
+		position: relative;
 
-		h1,
-		h2 {
+		@include min-tablet {
+			--px: #{$sp-400};
+			@include mx($sp-600);
+		}
+
+		@include desktop {
+			--px: #{$sp-600};
+			max-width: 76vw;
+			@include mx(auto);
+		}
+
+		@include screen-xl {
+			max-width: $screen-md;
+			@include mx(auto);
+		}
+
+		&:before,
+		&:after {
+			pointer-events: none;
+			box-sizing: inherit;
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		&:before,
+		&:after {
+			// Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+			border: 3px solid transparent;
+			width: 0;
+			height: 0;
+		}
+
+		// This covers the top & right borders (expands right, then down)
+		&:before {
+			top: 0;
+			left: 0;
+		}
+
+		// And this the bottom & left borders (expands left, then up)
+		&:after {
+			bottom: 0;
+			right: 0;
+		}
+
+		h1 {
 			text-align: center;
 			margin-bottom: 2rem;
 		}
 		h1 {
+			--height: 4rem;
 			position: relative;
 			z-index: 1;
 			overflow: hidden;
+			height: var(--height);
 
 			&:before,
 			&:after {
@@ -128,44 +112,111 @@
 				margin-left: -50%;
 				text-align: right;
 			}
-		}
 
-		.intro {
-			margin-bottom: 3rem;
-
-			.def {
-				position: relative;
-
-				.bull {
-					display: none;
-					position: absolute;
-					width: 50rem;
-					background-color: $white;
-					padding: 1.5rem;
-					@include br-300;
-					@include ds-300;
-				}
-				&:hover {
-					.bull {
-						display: block;
-					}
-				}
+			.polymath {
+				height: var(--height);
+				width: 12rem;
 			}
 		}
 
-		.grid {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-
-			--box-padding: 2rem;
-			.col-1 {
-				padding-right: var(--box-padding);
-				border-right: solid 1px $black;
+		.contact {
+			margin-top: $sp-500;
+			p {
+				text-align: center;
 			}
+		}
 
-			.col-2 {
-				padding-left: var(--box-padding);
+		.logo-pm {
+			position: absolute;
+			bottom: 2rem;
+			transform: translate(-50%, -50%);
+			right: 30%;
+			width: 3rem;
+			height: 3rem;
+
+			border-radius: 100rem;
+			background: red;
+
+			@include min-tablet {
+				right: 4rem;
 			}
+			&.appears {
+				@include animation(1s stamp normal forwards ease-out);
+			}
+		}
+
+		/* Paper Animations */
+		@include animation(2s coloring normal forwards ease-out 2s);
+		&:before {
+			@include animation(2s top-left normal forwards ease-out);
+		}
+		&:after {
+			@include animation(
+				2s bottom-right normal forwards ease-out 2s
+			);
+		}
+	}
+
+	@include anim(coloring) {
+		0% {
+			background-color: transparent;
+		}
+		100% {
+			background-color: $white;
+		}
+	}
+
+	@include anim(top-left) {
+		0% {
+			width: 0rem;
+			height: 0rem;
+		}
+		50% {
+			height: 0rem;
+			width: 100%;
+			border-top-color: $black;
+			transition: width 1s ease-in;
+		}
+		100% {
+			width: 100%;
+			height: 100%;
+			border-top-color: $black;
+			border-right-color: $black;
+			transition: height 1s linear 1s;
+		}
+	}
+
+	@include anim(bottom-right) {
+		0% {
+			width: 0rem;
+			height: 0rem;
+			border-bottom-color: $black;
+			border-left-color: $black;
+		}
+		50% {
+			height: 0rem;
+			width: 100%;
+			transition: width 1s ease-in;
+		}
+		100% {
+			width: 100%;
+			height: 100%;
+			transition: height 1s linear 1s;
+			border-bottom-color: $black;
+			border-left-color: $black;
+		}
+	}
+
+	@include anim(stamp) {
+		from {
+			transform-origin: 50% 50%;
+			transform: rotate(-2deg) scale(3);
+			@include ds-700;
+			box-shadow: 20 20 58px #121212, -20 -20 58px #121212;
+		}
+		to {
+			opacity: 1;
+			transform: rotate(-20deg) scale(1);
 		}
 	}
 </style>

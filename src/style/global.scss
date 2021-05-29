@@ -1,0 +1,205 @@
+@import "theme";
+@import "reset";
+@import "fonts";
+
+:root {
+	font-size: calc(50% + 0.4vw);
+	@include screen-md {
+		font-size: calc(50% + 0.5vw);
+	}
+	@include phone {
+		font-size: calc(80% + 0.5vw);
+	}
+	@include screen-xl {
+		font-size: calc(80% + 0.3vw);
+	}
+}
+
+*:fullscreen,
+*:-webkit-full-screen,
+*:-moz-full-screen {
+	background-color: $white;
+}
+::backdrop {
+	background-color: $white;
+}
+
+body {
+	font-family: "FiraCode Light", sans-serif;
+	min-height: -webkit-fill-available;
+
+	&.no-scroll {
+		height: 100vh;
+		overflow-y: hidden;
+	}
+}
+
+html,
+body,
+#svelte {
+	background: $white;
+	background: $gradient;
+
+	@include phone {
+		background: $champ;
+	}
+}
+
+/* -----------------
+	GLOBAL
+----------------- */
+
+.global-container {
+	@include container-width;
+}
+
+// Titles & Bodies
+
+h1 {
+	@include t1;
+	line-height: 6rem;
+
+	@include phone {
+		@include fs5;
+	}
+}
+h2 {
+	@include t2;
+}
+h3 {
+	@include t3;
+}
+h4 {
+	@include t4-sb;
+}
+
+h5 {
+	@include caption;
+
+	&.light {
+		@include caption-light;
+	}
+}
+
+p {
+	@include body1;
+	text-align: justify;
+	margin-bottom: 0.7rem;
+}
+
+h6 {
+	@include body2-sb;
+}
+
+/* -----------------
+	INPUTS & FORM RELATED
+----------------- */
+
+input,
+textarea,
+select,
+.select-input {
+	position: relative;
+	width: 100%;
+	padding: $sp-200 $sp-300;
+	color: $black;
+	background-color: $white;
+	@include caption-light;
+	@include br-300;
+	@include ds-300;
+	@include border($white);
+	@include transition("0.3s border ease, 0.3s box-shadow ease");
+
+	&::placeholder {
+		color: $grey-500;
+	}
+	&:focus {
+		@include ds-500;
+		@include transition(0.3s box-shadow ease);
+	}
+	&.error {
+		@include border($danger-500);
+		@include transition(0.3s border ease);
+	}
+	&.valid {
+		@include border($success);
+		@include transition(0.3s border ease);
+	}
+
+	.input-error {
+		position: absolute;
+		color: $danger-500;
+		margin-top: $sp-100;
+		padding-right: $sp-300;
+		@include body2;
+	}
+}
+
+textarea {
+	resize: vertical;
+}
+
+/* -----------------
+	BUTTONS & LINKS & LABELS
+----------------- */
+
+button {
+	position: relative;
+	padding: $sp-200 $sp-300;
+	@include caption;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	@include transition($transition);
+
+	// LINK
+	&.link {
+		@include link($white);
+		padding: 0;
+	}
+
+	// RED BTN
+	&.fill-danger {
+		@include btn($danger-500, $white, $br-500);
+
+		&:hover,
+		&.focus,
+		&.active {
+			@include btn($danger-700, $white, $br-500);
+		}
+	}
+	&.outline-danger {
+		@include btn(transparent, $danger-500, $br-500, $danger-500);
+
+		&:hover,
+		&.focus,
+		&.active {
+			@include btn($danger-500, $white, $br-500);
+		}
+	}
+}
+
+a {
+	color: $black;
+	text-decoration: underline;
+
+	&:hover {
+		font-weight: 600;
+	}
+}
+
+/* -----------------
+	IMAGES & SVG
+----------------- */
+
+img.cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.img-cover {
+	overflow: hidden;
+	@include circle;
+	// add width & height
+}
