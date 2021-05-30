@@ -4,7 +4,10 @@
 	import Intro from "$lib/Intro.svelte";
 	import Skills from "$lib/Skills.svelte";
 	import IntersectionObserver from "$lib/IntersectionObserver.svelte";
+	import Seo from "$lib/SEO.svelte";
 </script>
+
+<Seo />
 
 <section>
 	<h1>

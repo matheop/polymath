@@ -18,9 +18,9 @@ export function init(settings) {
 		amp: false,
 		dev: false,
 		entry: {
-			file: "/./_app/start-c02e7d31.js",
+			file: "/./_app/start-a98f0461.js",
 			css: ["/./_app/assets/start-5f1180db.css"],
-			js: ["/./_app/start-c02e7d31.js","/./_app/chunks/vendor-d5878065.js"]
+			js: ["/./_app/start-a98f0461.js","/./_app/chunks/vendor-48cdb5a0.js"]
 		},
 		fetched: undefined,
 		floc: false,
@@ -50,7 +50,7 @@ const d = decodeURIComponent;
 const empty = () => ({});
 
 const manifest = {
-	assets: [{"file":"favicon.svg","size":4943,"type":"image/svg+xml"},{"file":"fonts/FiraCode-Bold.ttf","size":324328,"type":"font/ttf"},{"file":"fonts/FiraCode-Light.ttf","size":285000,"type":"font/ttf"},{"file":"fonts/FiraCode-Medium.ttf","size":294960,"type":"font/ttf"},{"file":"fonts/FiraCode-Regular.ttf","size":299152,"type":"font/ttf"},{"file":"fonts/FiraCode-Retina.ttf","size":295252,"type":"font/ttf"},{"file":"fonts/FiraCode-SemiBold.ttf","size":311452,"type":"font/ttf"},{"file":"fonts/MrDafoe-Regular.ttf","size":46624,"type":"font/ttf"},{"file":"robots.txt","size":67,"type":"text/plain"}],
+	assets: [{"file":"favicon.svg","size":4943,"type":"image/svg+xml"},{"file":"fonts/FiraCode-Bold.ttf","size":324328,"type":"font/ttf"},{"file":"fonts/FiraCode-Light.ttf","size":285000,"type":"font/ttf"},{"file":"fonts/FiraCode-Medium.ttf","size":294960,"type":"font/ttf"},{"file":"fonts/FiraCode-Regular.ttf","size":299152,"type":"font/ttf"},{"file":"fonts/FiraCode-Retina.ttf","size":295252,"type":"font/ttf"},{"file":"fonts/FiraCode-SemiBold.ttf","size":311452,"type":"font/ttf"},{"file":"fonts/MrDafoe-Regular.ttf","size":46624,"type":"font/ttf"},{"file":"logo-polymath.png","size":8687,"type":"image/png"},{"file":"logo.svg","size":27857,"type":"image/svg+xml"},{"file":"robots.txt","size":67,"type":"text/plain"}],
 	layout: "src/routes/__layout.svelte",
 	error: ".svelte-kit/build/components/error.svelte",
 	routes: [
@@ -75,7 +75,7 @@ const module_lookup = {
 	"src/routes/__layout.svelte": () => import("../../src/routes/__layout.svelte"),".svelte-kit/build/components/error.svelte": () => import("./components/error.svelte"),"src/routes/index.svelte": () => import("../../src/routes/index.svelte")
 };
 
-const metadata_lookup = {"src/routes/__layout.svelte":{"entry":"/./_app/pages/__layout.svelte-d89bd8dd.js","css":["/./_app/assets/pages/__layout.svelte-9ad38dcc.css"],"js":["/./_app/pages/__layout.svelte-d89bd8dd.js","/./_app/chunks/vendor-d5878065.js"],"styles":null},".svelte-kit/build/components/error.svelte":{"entry":"/./_app/error.svelte-1b15472d.js","css":[],"js":["/./_app/error.svelte-1b15472d.js","/./_app/chunks/vendor-d5878065.js"],"styles":null},"src/routes/index.svelte":{"entry":"/./_app/pages/index.svelte-e2c2336e.js","css":["/./_app/assets/pages/index.svelte-87ddf1f5.css"],"js":["/./_app/pages/index.svelte-e2c2336e.js","/./_app/chunks/vendor-d5878065.js"],"styles":null}};
+const metadata_lookup = {"src/routes/__layout.svelte":{"entry":"/./_app/pages/__layout.svelte-80dcb1a8.js","css":["/./_app/assets/pages/__layout.svelte-9ad38dcc.css"],"js":["/./_app/pages/__layout.svelte-80dcb1a8.js","/./_app/chunks/vendor-48cdb5a0.js"],"styles":null},".svelte-kit/build/components/error.svelte":{"entry":"/./_app/error.svelte-7703ba07.js","css":[],"js":["/./_app/error.svelte-7703ba07.js","/./_app/chunks/vendor-48cdb5a0.js"],"styles":null},"src/routes/index.svelte":{"entry":"/./_app/pages/index.svelte-3fc4c1b1.js","css":["/./_app/assets/pages/index.svelte-87ddf1f5.css"],"js":["/./_app/pages/index.svelte-3fc4c1b1.js","/./_app/chunks/vendor-48cdb5a0.js"],"styles":null}};
 
 async function load_component(file) {
 	return {

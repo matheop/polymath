@@ -8,6 +8,7 @@
 		Hey ! C'est moi, <strong>votre homme à tout faire</strong>,
 		<a
 			target="_blank"
+			rel="noopener"
 			href="https://fr.wikipedia.org/wiki/Polymathie#:~:text=La%20polymathie%20est%20la%20connaissance,%C2%BB%20ou%20%C2%AB%20g%C3%A9nie%20universel%20%C2%BB."
 			class="def"
 			>Polymath <div
@@ -28,6 +29,7 @@
 		>. Ou simplement
 		<a
 			target="_blank"
+			rel="noopener"
 			href="https://www.linkedin.com/in/matheopierini/">Math</a>
 		en fait...
 		<!-- Hey! I'm your polyvalent advisor, Polymath. Or just Math
@@ -37,6 +39,7 @@
 		Je suis étudiant-ingénieur en Informatique et Système
 		d'Information à l'<a
 			target="_blank"
+			rel="noopener"
 			href="https://www.utt.fr/"
 			>Université de Technologie de Troyes</a>
 		(Oui oui, c'est une école d'ingénieur bien que son nom puisse laisser
