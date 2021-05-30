@@ -35,7 +35,9 @@
 	</p>
 	<p>
 		Je suis étudiant-ingénieur en Informatique et Système
-		d'Information à l'<a href="https://www.utt.fr/"
+		d'Information à l'<a
+			target="_blank"
+			href="https://www.utt.fr/"
 			>Université de Technologie de Troyes</a>
 		(Oui oui, c'est une école d'ingénieur bien que son nom puisse laisser
 		en transparaitre autrement).

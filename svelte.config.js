@@ -1,5 +1,6 @@
 import preprocess from "svelte-preprocess";
 import node from "@sveltejs/adapter-node";
+import netlify from "@sveltejs/adapter-netlify";
 import { resolve } from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -19,7 +20,7 @@ const config = {
 	}),
 
 	kit: {
-		adapter: node(),
+		adapter: netlify(),
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: "#svelte",
 		vite: {
