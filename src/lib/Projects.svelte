@@ -39,7 +39,7 @@
 			<h3 class="title">
 				{p.title}
 			</h3>
-			<a href={p.url} target="_blank">
+			<a rel="noopener" href={p.url} target="_blank">
 				<i>
 					<img
 						class:isMap={p.logo === "/logo-map.png"}
