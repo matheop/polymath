@@ -5,13 +5,13 @@
 
 <section class="intro">
 	<p>
-		Hey ! C'est moi, <strong>votre homme à tout faire</strong>,
+		Hey ! C'est moi, <strong>votre homme à tout faire,</strong>
 		<a
 			target="_blank"
 			rel="noopener"
 			href="https://fr.wikipedia.org/wiki/Polymathie"
 			class="def">
-			Polymath
+			<strong class="color"> Polymath </strong>
 			<div
 				bind:clientWidth={quoteWidth}
 				class="tooltip"
@@ -27,7 +27,8 @@
 					« génie universel ».</q>
 				– Wikipédia
 			</div>
-		</a>. Ou simplement
+		</a>
+		! Ou simplement
 		<a
 			target="_blank"
 			rel="noopener"
@@ -35,8 +36,9 @@
 		en fait...
 	</p>
 	<p>
-		Je suis étudiant-ingénieur en Informatique et Système
-		d'Information à l'<a
+		Je suis étudiant-ingénieur dans les
+		<strong>Sciences Informatiques</strong>
+		à l'<a
 			target="_blank"
 			rel="noopener"
 			href="https://www.utt.fr/"
@@ -57,7 +59,8 @@
 		afin d'en découvrir un peu plus. C'est ainsi que j'ai
 		découvert une nouvelle passion ! De la conception à la
 		réalisation, un nouveau champ des possibles dont seule la
-		créativité semble être la limite s'est ouvert à moi.
+		<strong>créativité</strong> semble être la limite s'est ouvert
+		à moi.
 	</p>
 	<p>
 		Depuis, je me suis <strong
@@ -80,6 +83,7 @@
 
 <style lang="scss">
 	.def {
+		text-decoration: none;
 		.tooltip {
 			display: none;
 			position: absolute;

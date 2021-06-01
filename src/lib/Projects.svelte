@@ -31,7 +31,7 @@
 </script>
 
 <div class="title section-title">
-	<Typewriter chars={12} speed={3} title={"Réalisations"} />
+	<Typewriter chars={14} speed={2.8} title={"Collaborations"} />
 </div>
 <section class="grid cols-3">
 	{#each projects as p}

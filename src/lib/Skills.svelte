@@ -21,7 +21,7 @@
 		<div class="title">
 			<Typewriter
 				chars={13}
-				speed={3}
+				speed={2.6}
 				addDelay={true}
 				title={"Développement"} />
 		</div>
@@ -33,7 +33,7 @@
 			vote site web, je m'occupe aussitôt du <strong
 				>code</strong>
 			et de la
-			<strong>mise en ligne</strong>!
+			<strong>mise en ligne</strong> !
 		</p>
 		<p>
 			<strong class="color"> Facile, non ? </strong>

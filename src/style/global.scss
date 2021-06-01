@@ -92,14 +92,13 @@ p {
 	strong,
 	span {
 		font-size: 1.1rem;
-		color: $gradient-90 !important;
 	}
 
 	span,
 	strong.color {
 		background-size: 100%;
 		background-repeat: repeat;
-		background: $gradient-90;
+		background: $gradient-45;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		-moz-background-clip: text;
