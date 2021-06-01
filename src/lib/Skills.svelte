@@ -10,10 +10,10 @@
 		<p>
 			Besoin d'un site vitrine pour votre activité, mais vous
 			voulez quelque chose qui vous corresponde ? Après une
-			prise de besoin détaillé, je conçois pour vous les designs
-			tout en applicant les règles de rétention client pour les
-			amener vers <strong>votre objectif</strong>. Bien sûr,
-			toujours dans le
+			prise de besoin détaillée, je conçois pour vous les
+			designs tout en appliquant les règles de rétention client
+			pour les amener vers <strong>votre objectif</strong>. Bien
+			sûr, toujours dans le
 			<strong>respect de vos utilisateurs.</strong>
 		</p>
 	</div>
@@ -32,7 +32,11 @@
 			Après que nous nous soyons mis d'accord sur le contenu de
 			vote site web, je m'occupe aussitôt du <strong
 				>code</strong>
-			et de la <strong>mise en ligne</strong> ! Facile, non ?
+			et de la
+			<strong>mise en ligne</strong>!
+		</p>
+		<p>
+			<strong class="color"> Facile, non ? </strong>
 		</p>
 	</div>
 </section>

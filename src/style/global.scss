@@ -89,8 +89,21 @@ p {
 		margin-bottom: 0.7rem;
 	}
 
-	strong {
+	strong,
+	span {
 		font-size: 1.1rem;
+		color: $gradient-90 !important;
+	}
+
+	span,
+	strong.color {
+		background-size: 100%;
+		background-repeat: repeat;
+		background: $gradient-90;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-moz-background-clip: text;
+		-moz-text-fill-color: transparent;
 	}
 }
 
