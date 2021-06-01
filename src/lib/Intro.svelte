@@ -33,8 +33,6 @@
 			rel="noopener"
 			href="https://www.linkedin.com/in/matheopierini/">Math</a>
 		en fait...
-		<!-- Hey! I'm your polyvalent advisor, Polymath. Or just Math
-				actually... -->
 	</p>
 	<p>
 		Je suis étudiant-ingénieur en Informatique et Système
