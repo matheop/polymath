@@ -5,6 +5,8 @@
 	import Skills from "$lib/Skills.svelte";
 	import IntersectionObserver from "$lib/IntersectionObserver.svelte";
 	import Seo from "$lib/SEO.svelte";
+	import Projects from "$lib/Projects.svelte";
+	import Contact from "$lib/Contact.svelte";
 </script>
 
 <Seo />
@@ -22,10 +24,9 @@
 
 	<Skills />
 
-	<div class="contact">
-		<p>Contact:</p>
-		<p><strong>matheo.pierini.pro@gmail.com</strong></p>
-	</div>
+	<Projects />
+
+	<Contact />
 
 	<IntersectionObserver let:intersecting top={-50} once={true}>
 		{#if intersecting}
@@ -44,6 +45,8 @@
 		@include mx($sp-100);
 		max-width: 100vw;
 		position: relative;
+		margin-bottom: 0; // override section global
+		color: $white;
 
 		@include min-tablet {
 			--px: #{$sp-400};
@@ -122,27 +125,16 @@
 			}
 		}
 
-		.contact {
-			margin-top: $sp-500;
-			p {
-				text-align: center;
-			}
-		}
-
 		.logo-pm {
 			position: absolute;
 			bottom: 2rem;
 			transform: translate(-50%, -50%);
 			right: 30%;
-			width: 3rem;
-			height: 3rem;
+			width: 5rem;
+			height: 5rem;
 
 			border-radius: 100rem;
-			background: red;
-
-			@include min-tablet {
-				right: 4rem;
-			}
+			background: $danger-700;
 			&.appears {
 				@include animation(1s stamp normal forwards ease-out);
 			}
@@ -165,6 +157,7 @@
 			background-color: transparent;
 		}
 		100% {
+			color: $black;
 			background-color: $white;
 		}
 	}

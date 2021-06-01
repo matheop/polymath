@@ -58,6 +58,10 @@ $scale: 1.25;
 	font-family: "FiraCode Medium";
 	@include fs4;
 }
+@mixin t2-regular {
+	@include fs4;
+	font-family: "FiraCode Regular";
+}
 @mixin t2-light {
 	@include fs4;
 	font-family: "FiraCode Light";
@@ -74,18 +78,27 @@ $scale: 1.25;
 // title 3
 @mixin t3 {
 	font-family: "FiraCode Medium";
+	letter-spacing: 1px;
 	@include fs3;
+}
+@mixin t3-regular {
+	@include fs3;
+	letter-spacing: 1px;
+	font-family: "FiraCode Regular";
 }
 @mixin t3-light {
 	font-family: "FiraCode Light";
+	letter-spacing: 1px;
 	@include fs3;
 }
 @mixin t3-sb {
 	font-family: "FiraCode SemiBold";
+	letter-spacing: 1px;
 	@include fs3;
 }
 @mixin t3-bold {
 	font-family: "FiraCode Bold";
+	letter-spacing: 1px;
 	@include fs3;
 }
 
@@ -93,6 +106,10 @@ $scale: 1.25;
 @mixin t4 {
 	font-family: "FiraCode Medium";
 	@include fs2;
+}
+@mixin t4-regular {
+	@include fs2;
+	font-family: "FiraCode Regular";
 }
 @mixin t4-light {
 	@include fs2;

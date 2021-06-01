@@ -3,15 +3,16 @@
 	let quoteWidth: number;
 </script>
 
-<div class="intro">
+<section class="intro">
 	<p>
 		Hey ! C'est moi, <strong>votre homme à tout faire</strong>,
 		<a
 			target="_blank"
 			rel="noopener"
-			href="https://fr.wikipedia.org/wiki/Polymathie#:~:text=La%20polymathie%20est%20la%20connaissance,%C2%BB%20ou%20%C2%AB%20g%C3%A9nie%20universel%20%C2%BB."
-			class="def"
-			>Polymath <div
+			href="https://fr.wikipedia.org/wiki/Polymathie"
+			class="def">
+			Polymath
+			<div
 				bind:clientWidth={quoteWidth}
 				class="tooltip"
 				style="left: {$isPhone
@@ -25,8 +26,8 @@
 					également nommé « personne d'esprit universel » ou
 					« génie universel ».</q>
 				– Wikipédia
-			</div></a
-		>. Ou simplement
+			</div>
+		</a>. Ou simplement
 		<a
 			target="_blank"
 			rel="noopener"
@@ -42,17 +43,15 @@
 			rel="noopener"
 			href="https://www.utt.fr/"
 			>Université de Technologie de Troyes</a>
-		(Oui oui, c'est une école d'ingénieur bien que son nom puisse laisser
-		en transparaitre autrement).
+		(Oui oui, c'est bien une école d'ingénieur malgré ce que peut laisser
+		penser son nom).
 	</p>
 	<p>
 		Je suis également
-		<strong>"Designer"</strong>
-		(mais je préfère le terme "Ergonome") et
+		<strong>Ergonome</strong>
+		(ou Designer) et
 		<strong>Développeur</strong>
-		en <strong>Freelance spécialisé dans le web</strong>.
-		<!-- I'm a 22-year-old software engineer and also a designer and
-					web developer freelance. -->
+		en <strong>Freelance</strong>.
 	</p>
 	<p>
 		Fortement intéressé et intrigué par l'informatique, je me suis
@@ -63,10 +62,11 @@
 		créativité semble être la limite s'est ouvert à moi.
 	</p>
 	<p>
-		Depuis, je me suis spécialisé dans le développement web, me
-		permettant aussi bien de créer des interfaces utilisateurs que
-		l'architecture permettant de stocker et délivrer les données
-		dont ont besoin les clients/utilisateurs.
+		Depuis, je me suis <strong
+			>spécialisé dans le Développement Web</strong
+		>, me permettant aussi bien de créer des interfaces
+		utilisateurs que l'architecture permettant de stocker et
+		délivrer les données dont ont besoin les clients/utilisateurs.
 	</p>
 	<p>
 		Au fur et à mesure, je me suis rendu compte de l'importance de
@@ -74,11 +74,11 @@
 		(Expérience Utilisateur) et notamment de l'<strong>UI</strong>
 		(Interface Utilisateur) dans la réussite d'un projet. Ça tombe
 		bien, encore quelque chose qui m'anime ! Ni une ni deux, je me
-		suis formé à la <strong>conception</strong> et au
-		<strong>design</strong> de projets informatiques, dans le but de
+		suis formé à la <strong>Conception</strong> et au
+		<strong>Design</strong> de projets informatiques, dans le but de
 		pouvoir proposer un service complet à mes futurs clients.
 	</p>
-</div>
+</section>
 
 <style lang="scss">
 	.def {

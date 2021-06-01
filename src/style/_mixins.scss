@@ -95,7 +95,7 @@
 }
 
 /* underlining */
-@mixin underlining($color: $prim-500) {
+@mixin underlining($color: $gradient-45) {
 	content: "";
 	width: 50%;
 	height: 1px;
@@ -155,7 +155,7 @@
 @mixin ds-300 {
 	@include box-shadow(0px 0px 6px 2px rgba(18, 18, 18, 0.05));
 }
-@mixin is($color: $prim-500) {
+@mixin is($color: $gradient-45) {
 	@include box-shadow(inset 0px 6px 0px $color);
 }
 

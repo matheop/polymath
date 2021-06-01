@@ -37,11 +37,11 @@ body {
 html,
 body,
 #svelte {
-	background: $white;
-	background: $gradient;
+	background: #3f5efb;
+	background: $gradient-45;
 
 	@include phone {
-		background: $champ;
+		background: $gradient-90;
 	}
 }
 
@@ -67,7 +67,7 @@ h2 {
 	@include t2;
 }
 h3 {
-	@include t3;
+	@include t3-regular;
 }
 h4 {
 	@include t4-sb;
@@ -84,7 +84,14 @@ h5 {
 p {
 	@include body1;
 	text-align: justify;
-	margin-bottom: 0.7rem;
+
+	&:not(:last-child) {
+		margin-bottom: 0.7rem;
+	}
+
+	strong {
+		font-size: 1.1rem;
+	}
 }
 
 h6 {
@@ -202,4 +209,62 @@ img.cover {
 	overflow: hidden;
 	@include circle;
 	// add width & height
+}
+
+/* -----------------
+	SECTIOON
+----------------- */
+
+.title {
+	width: fit-content;
+	text-align: center;
+	margin: 0 auto $sp-200;
+}
+
+.section-title {
+	margin-bottom: $sp-300;
+}
+
+section {
+	margin-bottom: $sp-400;
+
+	&.grid {
+		display: block;
+
+		@include phone {
+			[class^="col-"] {
+				margin-bottom: $sp-300;
+			}
+		}
+
+		@include min-tablet {
+			display: grid;
+			--box-padding: 2rem;
+
+			[class^="col-"] {
+				&:not(:last-of-type) {
+					border-right: solid 1px $black;
+					padding-right: var(--box-padding);
+				}
+
+				&:not(:first-of-type):not(:last-of-type) {
+					padding-right: var(--box-padding);
+					padding-left: var(--box-padding);
+				}
+
+				&:last-of-type {
+					padding-left: var(--box-padding);
+				}
+			}
+		}
+
+		@include min-tablet {
+			&.cols-2 {
+				grid-template-columns: 50% 50%;
+			}
+			&.cols-3 {
+				grid-template-columns: repeat(3, 33.33%);
+			}
+		}
+	}
 }

@@ -43,15 +43,6 @@ $headerHeight: 6rem;
 $BOnavWidth: 6rem;
 
 /* Nuancier */
-$prim-900: #01122c;
-$prim-700: #2847c3;
-$prim-500: #4b68da;
-$prim-300: #7087e2;
-
-$sec-700: #fad107;
-$sec-500: #fbde4b;
-$sec-300: #fce572;
-
 $black: #121212;
 $grey-700: #7e7e7e;
 $grey-500: #c5c5c5;
@@ -63,19 +54,15 @@ $white: #e9e9d5;
 $champ: #ece2b0;
 $isa: #ece2df;
 
-$gradient: linear-gradient(135deg, $champ 0%, $white 100%);
-$gradient2: linear-gradient(
-	135deg,
-	rgba(233, 233, 213, 1) 66%,
-	rgba(236, 226, 176, 1) 100%
-);
+$gradient-45: linear-gradient(45deg, #fc466b 0%, #3f5efb 100%);
+$gradient-90: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
 
 /* Couleurs des notifications du thème */
 $success: #14ac6d;
-$warning: $sec-700;
+$warning: #fad107;
 $danger-500: #ed626d;
 $danger-700: #e83947;
-$info: $prim-700;
+$info: #3f5efb;
 
 // Transparence pour Hexa
 /*

@@ -1,15 +1,20 @@
 <script>
-	import { onMount } from "svelte";
-
 	import IntersectionObserver from "./IntersectionObserver.svelte";
 
 	export let title: string;
-	export let isFast: boolean;
+	export let chars: number;
+	export let speed: number;
 </script>
 
-<IntersectionObserver let:intersecting>
+<IntersectionObserver let:intersecting once={true}>
 	{#if intersecting}
-		<h2 class:isFast>{title}</h2>
+		<h2
+			style="
+				animation-timing-function: steps({chars}, end);
+				animation-duration: {speed}s;
+				">
+			{title}
+		</h2>
 	{/if}
 </IntersectionObserver>
 
@@ -20,11 +25,7 @@
 		white-space: nowrap; /* Keeps the content on a single line */
 		margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 		letter-spacing: 0.1rem; /* Adjust as needed */
-		animation: typing 3.5s steps(13, end);
-
-		&.isFast {
-			animation-timing-function: steps(10, end);
-		}
+		animation: typing 3.5s;
 
 		&:after {
 			position: absolute;
