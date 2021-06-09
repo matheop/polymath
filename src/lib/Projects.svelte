@@ -8,7 +8,7 @@
 		url: string;
 	}
 
-	const projects: Project[] = [
+	const collabs: Project[] = [
 		{
 			col: 1,
 			title: "Workingoo",
@@ -28,13 +28,22 @@
 			url: "https://www.apparelo.com/",
 		},
 	];
+
+	const reals: Project[] = [
+		{
+			col: 1,
+			title: "FaaS",
+			logo: "/logo-faas.png",
+			url: "https://www.faas-france.com/",
+		},
+	];
 </script>
 
 <div class="title section-title">
 	<Typewriter chars={14} speed={2.8} title={"Collaborations"} />
 </div>
 <section class="grid cols-3">
-	{#each projects as p}
+	{#each collabs as p}
 		<div class="col-{p.col}">
 			<h3 class="title">
 				{p.title}
@@ -45,6 +54,24 @@
 						class:isMap={p.logo === "/logo-map.png"}
 						src={p.logo}
 						alt={p.title} />
+				</i>
+			</a>
+		</div>
+	{/each}
+</section>
+
+<div class="title section-title">
+	<Typewriter chars={12} speed={2.4} title={"Réalisations"} />
+</div>
+<section class="grid">
+	{#each reals as p}
+		<div class="col{p.col}">
+			<h3 class="title">
+				{p.title}
+			</h3>
+			<a rel="noopener" href={p.url} target="_blank">
+				<i>
+					<img src={p.logo} alt={p.title} />
 				</i>
 			</a>
 		</div>

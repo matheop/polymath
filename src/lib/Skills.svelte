@@ -27,7 +27,7 @@
 		</div>
 
 		<p>
-			Ca y est, vous avez vos designs pour votre site internet,
+			Ça y est, vous avez vos designs pour votre site internet,
 			mais il vous manque le développeur ? Pas cette fois !
 			Après que nous nous soyons mis d'accord sur le contenu de
 			vote site web, je m'occupe aussitôt du <strong
